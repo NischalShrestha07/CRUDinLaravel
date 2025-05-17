@@ -13,11 +13,14 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 //login routes
 Route::get('/', [AuthController::class, 'login'])->name('user.login');
 Route::post('/login', [AuthController::class, 'authenticate'])->name('user.authenticate');
+Route::get('/logout', [AuthController::class, 'logout'])->name('user.logout');
 
 //users routes
 Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/user/register', [AuthController::class, 'registerUser'])->name('user.register');
 Route::get('/users', [UserController::class, 'index']);
+Route::get('/users/edit', [UserController::class, 'edit'])->name('user.edit');
+Route::delete('/users/{id}', [UserController::class, 'delete'])->name('user.delete');
 
 
 

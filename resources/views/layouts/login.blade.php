@@ -4,7 +4,8 @@
     <div class="container mt-5"
         style="border: 2px solid black;  background:aliceblue;padding: 33px; border-radius: 15px">
         <h1 class="text-center">Login</h1>
-        <form action="">
+        <form action="{{route('user.authenticate')}}" method="POST">
+            @csrf
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
                 <input type="email" name="email" placeholder="Email" class="form-control" id="exampleInputEmail1"

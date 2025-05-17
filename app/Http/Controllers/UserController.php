@@ -10,5 +10,8 @@ class UserController extends Controller
     {
         //
     }
-    // public
+    public function edit()
+    {
+        //\
+    }
 }
